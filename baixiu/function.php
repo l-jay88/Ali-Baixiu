@@ -50,7 +50,7 @@ function xiu_fetch_all($slet){
 	// xiu_connet($slet);
 	$query= xiu_connet($slet)['query'];
 	// $conn = xiu_connet($slet)['conn'];
-
+	$result = [];
 	while ($row = mysqli_fetch_assoc($query)) {
 		$result[] = $row;
 	}

@@ -39,6 +39,7 @@ xiu_get_current_user();
             <label class="form-image">
               <input id="avatar" type="file">
               <img src="/static/assets/img/default.png">
+              <input type="hidden" name="avatar">
               <i class="mask fa fa-upload"></i>
             </label>
           </div>
@@ -85,6 +86,30 @@ xiu_get_current_user();
 
   <script src="/static/assets/vendors/jquery/jquery.js"></script>
   <script src="/static/assets/vendors/bootstrap/js/bootstrap.js"></script>
+
+  <script >
+    $('#avatar').on('change',function(){
+      //当文件域选择状态变化会执行这个事件处理函数
+      // 判断是否选中了文件
+      var $this = $(this);
+      var files = $this.prop('files');
+      if (!files.length) return;
+      //拿到上传文件
+      var file = files[0];
+      // html5 新增，专门用于配合 ajax 向服务端传递二进制数据
+      var data = new FormData();
+      data.append('avatar',file);
+
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST','/admin/api/upload.php');
+      xhr.send(data);
+      xhr.onload = function(){
+
+        $this.siblings('img').attr('src',this.responseText);
+        $this.siblings('input').val(this.responseText);
+      }
+    })
+  </script>
   <script>NProgress.done()</script>
 </body>
 </html>
