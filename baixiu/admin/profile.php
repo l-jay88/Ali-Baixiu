@@ -90,9 +90,10 @@ xiu_get_current_user();
   <script >
     $('#avatar').on('change',function(){
       //当文件域选择状态变化会执行这个事件处理函数
-      // 判断是否选中了文件
+      
       var $this = $(this);
       var files = $this.prop('files');
+      // 判断是否选中了文件
       if (!files.length) return;
       //拿到上传文件
       var file = files[0];

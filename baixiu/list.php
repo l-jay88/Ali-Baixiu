@@ -11,18 +11,18 @@
   <div class="wrapper">
     <div class="topnav">
       <ul>
-        <li><a href="javascript:;"><i class="fa fa-glass"></i>奇趣事</a></li>
+        <li><a href="detail.php"><i class="fa fa-glass"></i>奇趣事</a></li>
         <li><a href="javascript:;"><i class="fa fa-phone"></i>潮科技</a></li>
-        <li><a href="javascript:;"><i class="fa fa-fire"></i>会生活</a></li>
+        <li><a href="list.php"><i class="fa fa-fire"></i>会生活</a></li>
         <li><a href="javascript:;"><i class="fa fa-gift"></i>美奇迹</a></li>
       </ul>
     </div>
     <div class="header">
       <h1 class="logo"><a href="index.html"><img src="/static/assets/img/logo.png" alt=""></a></h1>
       <ul class="nav">
-        <li><a href="javascript:;"><i class="fa fa-glass"></i>奇趣事</a></li>
+        <li><a href="detail.php"><i class="fa fa-glass"></i>奇趣事</a></li>
         <li><a href="javascript:;"><i class="fa fa-phone"></i>潮科技</a></li>
-        <li><a href="javascript:;"><i class="fa fa-fire"></i>会生活</a></li>
+        <li><a href="list.php"><i class="fa fa-fire"></i>会生活</a></li>
         <li><a href="javascript:;"><i class="fa fa-gift"></i>美奇迹</a></li>
       </ul>
       <div class="search">
